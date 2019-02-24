@@ -21,10 +21,6 @@ public class Pillar : MonoBehaviour {
         Init();
     }
 
-    private void Start () {
-
-    }
-
     private void Update () {
         if(IsIndicate) {
             if(!onceIndicate) {
