@@ -92,10 +92,10 @@ public class Player : MonoBehaviour {
                     0
                     );
 
-                    if((prevRotatePos.y - NearPillar.transform.position.y) > 0) {
-                        rigidbody.velocity = new Vector3(0,centrifugalForce,0);
+                    if((prevRotatePos.x - NearPillar.transform.position.x) > 0) {
+                        rigidbody.velocity = new Vector3(rotateSpeed * centrifugalForce,0,0);
                     } else {
-                        rigidbody.velocity = new Vector3(0,centrifugalForce,0);
+                        rigidbody.velocity = new Vector3(-rotateSpeed * centrifugalForce,0,0);
                     }
 
                 } else {
