@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac37d0f-a7b4-47fd-a3a4-6eefc5db165d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KAITENHITODE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KAITENHITODE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Sea.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Background/Sea/Sea.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Ground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Ground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Sky.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Sky.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Wall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Wall.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Wall2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Textures/Wall2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hitode/Hitode6.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hitode/Hitode6.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hitode/Hitode6.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hitode/Hitode6.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hitode/HitodeAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hitode/HitodeAnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Background-Prototypes/Sea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Background-Prototypes/Sea.unity" afterDir="false" />
-    </list>
+    <list default="true" id="aac37d0f-a7b4-47fd-a3a4-6eefc5db165d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +37,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Editor/AutoSnap.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-969">
+            <state relative-caret-position="-867">
               <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
               <folding>
                 <marker date="1551776071148" expanded="true" signature="8:42" ph="..." />
@@ -196,7 +181,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="674" y="1" width="700" height="735" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
@@ -268,7 +252,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Editor/AutoSnap.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
+        <state relative-caret-position="-867">
           <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
           <folding>
             <marker date="1551776071148" expanded="true" signature="8:42" ph="..." />
