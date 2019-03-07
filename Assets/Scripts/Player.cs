@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
     public GameObject NearPillar;
 
     //=============================================================
-    private Rigidbody rigidbody;
+    private Rigidbody _rigidbody;
 
     private Vector3 prevRotatePos;
 
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
     private float centrifugalForce = 5; //遠心力
     //=============================================================
     private void Init () {
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Awake () {
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour {
             //位置制御
             switch(RotateState) {
                 case ERotateState.InX:
-                rigidbody.position = new Vector3(
+                _rigidbody.position = new Vector3(
                     prevRotatePos.x,
                     NearPillar.transform.position.y + (prevRotatePos.y - NearPillar.transform.position.y) * Mathf.Cos(rotateRad * Mathf.Deg2Rad),
                     (prevRotatePos.y - NearPillar.transform.position.y) * Mathf.Sin(rotateRad * Mathf.Deg2Rad)
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour {
                 break;
 
                 case ERotateState.InY:
-                rigidbody.position = new Vector3(
+                _rigidbody.position = new Vector3(
                     NearPillar.transform.position.x + (prevRotatePos.x - NearPillar.transform.position.x) * Mathf.Cos(rotateRad * Mathf.Deg2Rad),
                     prevRotatePos.y,
                     (prevRotatePos.x - NearPillar.transform.position.x) * Mathf.Sin(rotateRad * Mathf.Deg2Rad)
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour {
                     case ERotateState.InX:
                     case ERotateState.InY:
                     case ERotateState.InZ:
-                    rigidbody.useGravity = true;
+                    _rigidbody.useGravity = true;
                     isStartedRotate = false;
                     isEndedRotate = true;
                     break;
@@ -119,58 +119,34 @@ public class Player : MonoBehaviour {
 
                 switch(RotateState) {
                     case ERotateState.InX:
-                    if((rotateRad % 360 >= 0 && rotateRad % 360 <= 90) || (rotateRad % 360 >= 270 && rotateRad % 360 <= 360)) {
-                        rigidbody.position = new Vector3(
+                    if(IsFrontArea()) {
+                        _rigidbody.position = new Vector3(
                             prevRotatePos.x,
                             NearPillar.transform.position.y + (prevRotatePos.y - NearPillar.transform.position.y) * Mathf.Cos(0),
                             0
                             );
-
-                        if((prevRotatePos.y - NearPillar.transform.position.y) > 0) {
-                            rigidbody.velocity = new Vector3(0,rotateSpeed * centrifugalForce,0);
-                        } else {
-                            rigidbody.velocity = new Vector3(0,-rotateSpeed * centrifugalForce,0);
-                        }
                     } else {
-                        rigidbody.position = new Vector3(
+                        _rigidbody.position = new Vector3(
                             prevRotatePos.x,
                             NearPillar.transform.position.y + (prevRotatePos.y - NearPillar.transform.position.y) * Mathf.Cos(180),
                             0
                             );
-
-                        if((prevRotatePos.y - NearPillar.transform.position.y) > 0) {
-                            rigidbody.velocity = new Vector3(0,-rotateSpeed * centrifugalForce,0);
-                        } else {
-                            rigidbody.velocity = new Vector3(0,rotateSpeed * centrifugalForce,0);
-                        }
                     }
                     break;
 
                     case ERotateState.InY:
-                    if((rotateRad % 360 >= 0 && rotateRad % 360 <= 90) || (rotateRad % 360 >= 270 && rotateRad % 360 <= 360)) {
-                        rigidbody.position = new Vector3(
+                    if(IsFrontArea()) {
+                        _rigidbody.position = new Vector3(
                             NearPillar.transform.position.x + (prevRotatePos.x - NearPillar.transform.position.x) * Mathf.Cos(0),
                             prevRotatePos.y,
                             0
                         );
-
-                        if((prevRotatePos.x - NearPillar.transform.position.x) > 0) {
-                            rigidbody.velocity = new Vector3(rotateSpeed * centrifugalForce,0,0);
-                        } else {
-                            rigidbody.velocity = new Vector3(-rotateSpeed * centrifugalForce,0,0);
-                        }
                     } else {
-                        rigidbody.position = new Vector3(
+                        _rigidbody.position = new Vector3(
                             NearPillar.transform.position.x + (prevRotatePos.x - NearPillar.transform.position.x) * Mathf.Cos(180),
                             prevRotatePos.y,
                             0
                         );
-
-                        if((prevRotatePos.x - NearPillar.transform.position.x) > 0) {
-                            rigidbody.velocity = new Vector3(-rotateSpeed * centrifugalForce,0,0);
-                        } else {
-                            rigidbody.velocity = new Vector3(rotateSpeed * centrifugalForce,0,0);
-                        }
                     }
                     break;
 
@@ -180,29 +156,69 @@ public class Player : MonoBehaviour {
                     default:
                     break;
                 }
+
+                AddCentifugalForce(RotateState,IsFrontArea());
             }
 
             //左移動
             if(InputUtil.IsPushButton(KeyCode.LeftArrow)) {
-                rigidbody.velocity -= speed;
+                _rigidbody.velocity -= speed;
             }
 
             //右移動
             if(InputUtil.IsPushButton(KeyCode.RightArrow)) {
-                rigidbody.velocity += speed;
+                _rigidbody.velocity += speed;
             }
 
             //上移動
             if(InputUtil.IsPushButtonDown(KeyCode.UpArrow)) {
-                rigidbody.velocity += jumpPower;
+                _rigidbody.velocity += jumpPower;
             }
 
             //z軸固定
-            if(rigidbody.position.z != 0) {
-                Vector3 tmp = rigidbody.position;
-                rigidbody.position = new Vector3(tmp.x,tmp.y,0);
+            if(_rigidbody.position.z != 0) {
+                Vector3 tmp = _rigidbody.position;
+                _rigidbody.position = new Vector3(tmp.x,tmp.y,0);
             }
         }
+    }
+
+    //=============================================================
+    /// <summary>
+    /// 遠心力を加える
+    /// </summary>
+    private void AddCentifugalForce (ERotateState rotateState,bool isFront) {
+        int num = isFront ? 1 : -1;
+
+        switch(rotateState) {
+            case ERotateState.InX:
+            if((prevRotatePos.y - NearPillar.transform.position.y) > 0) {
+                _rigidbody.velocity = new Vector3(0,rotateSpeed * centrifugalForce * num,0);
+            } else {
+                _rigidbody.velocity = new Vector3(0,-rotateSpeed * centrifugalForce * num,0);
+            }
+            break;
+
+            case ERotateState.InY:
+            if((prevRotatePos.x - NearPillar.transform.position.x) > 0) {
+                _rigidbody.velocity = new Vector3(rotateSpeed * centrifugalForce * num,0,0);
+            } else {
+                _rigidbody.velocity = new Vector3(-rotateSpeed * centrifugalForce * num,0,0);
+            }
+            break;
+
+            case ERotateState.InZ:
+            break;
+        }
+    }
+
+    //=============================================================
+    /// <summary>
+    /// 正面にいるかどうか
+    /// </summary>
+    /// <returns></returns>
+    private bool IsFrontArea () {
+        return (rotateRad % 360 >= 0 && rotateRad % 360 <= 90) || (rotateRad % 360 >= 270 && rotateRad % 360 <= 360);
     }
 
     //=============================================================
@@ -210,8 +226,8 @@ public class Player : MonoBehaviour {
     /// 回転開始処理
     /// </summary>
     private void StartRotate () {
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.useGravity = false; //重力を切る
+        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.useGravity = false; //重力を切る
         isEndedRotate = false; //回転終了判定の初期化
         isStartedRotate = true; //回転開始判定
         rotateRad = 0; //回転角の初期化
