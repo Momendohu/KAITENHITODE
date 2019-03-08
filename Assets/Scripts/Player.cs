@@ -96,6 +96,14 @@ public class Player : MonoBehaviour {
                 break;
 
                 case ERotateState.InZ:
+                float mag = (prevRotatePos - NearPillar.transform.position).magnitude;
+                float x = prevRotatePos.x - NearPillar.transform.position.x;
+                float y = prevRotatePos.y - NearPillar.transform.position.y;
+                _rigidbody.position = new Vector3(
+                    NearPillar.transform.position.x + mag * Mathf.Cos(Mathf.Atan2(y,x) + rotateRad * Mathf.Deg2Rad),
+                    NearPillar.transform.position.y + mag * Mathf.Sin(Mathf.Atan2(y,x) + rotateRad * Mathf.Deg2Rad),
+                    0
+                    );
                 break;
 
                 default:
@@ -151,6 +159,7 @@ public class Player : MonoBehaviour {
                     break;
 
                     case ERotateState.InZ:
+                    //補正必要なし
                     break;
 
                     default:
@@ -193,21 +202,24 @@ public class Player : MonoBehaviour {
         switch(rotateState) {
             case ERotateState.InX:
             if((prevRotatePos.y - NearPillar.transform.position.y) > 0) {
-                _rigidbody.velocity = new Vector3(0,rotateSpeed * centrifugalForce * num,0);
+                _rigidbody.velocity = rotateSpeed * centrifugalForce * num * Vector3.up;
             } else {
-                _rigidbody.velocity = new Vector3(0,-rotateSpeed * centrifugalForce * num,0);
+                _rigidbody.velocity = rotateSpeed * centrifugalForce * num * Vector3.down;
             }
             break;
 
             case ERotateState.InY:
             if((prevRotatePos.x - NearPillar.transform.position.x) > 0) {
-                _rigidbody.velocity = new Vector3(rotateSpeed * centrifugalForce * num,0,0);
+                _rigidbody.velocity = rotateSpeed * centrifugalForce * num * Vector3.right;
             } else {
-                _rigidbody.velocity = new Vector3(-rotateSpeed * centrifugalForce * num,0,0);
+                _rigidbody.velocity = rotateSpeed * centrifugalForce * num * Vector3.left;
             }
             break;
 
             case ERotateState.InZ:
+            float x = (transform.position.x - NearPillar.transform.position.x);
+            float y = (transform.position.y - NearPillar.transform.position.y);
+            _rigidbody.velocity = rotateSpeed * centrifugalForce * new Vector3(x,y,0).normalized;
             break;
         }
     }
@@ -246,6 +258,11 @@ public class Player : MonoBehaviour {
                 RotateState = ERotateState.InY;
                 NearPillar = other.gameObject;
             }
+
+            if(other.tag == "RotateAreaZ") {
+                RotateState = ERotateState.InZ;
+                NearPillar = other.gameObject;
+            }
         }
     }
 
@@ -260,11 +277,16 @@ public class Player : MonoBehaviour {
                 RotateState = ERotateState.InY;
                 NearPillar = other.gameObject;
             }
+
+            if(other.tag == "RotateAreaZ") {
+                RotateState = ERotateState.InZ;
+                NearPillar = other.gameObject;
+            }
         }
     }
 
     private void OnTriggerExit (Collider other) {
-        if(other.tag == "RotateAreaX" || other.tag == "RotateAreaY") {
+        if(other.tag == "RotateAreaX" || other.tag == "RotateAreaY" || other.tag == "RotateAreaZ") {
             if(NearPillar) NearPillar.transform.parent.GetComponent<Pillar>().IsIndicate = false;
             NearPillar = null;
             RotateState = ERotateState.None;
