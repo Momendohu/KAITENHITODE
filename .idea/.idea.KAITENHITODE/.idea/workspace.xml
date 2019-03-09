@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac37d0f-a7b4-47fd-a3a4-6eefc5db165d" name="Default Changelist" comment="" />
+    <list default="true" id="aac37d0f-a7b4-47fd-a3a4-6eefc5db165d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KAITENHITODE/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KAITENHITODE/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KAITENHITODE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KAITENHITODE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Models/Nidle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Background/Sea/Models/Nidle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode/Hitode6.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode/Hitode6.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode/HitodeAnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode/HitodeAnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode/Materials/Body.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hitode/Materials/Body.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Background-Prototypes/Sea.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Background-Prototypes/Sea.unity" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,38 +25,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/BlockWorld/BlockReplacer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-              <folding>
-                <marker date="1551774675305" expanded="true" signature="6:97" ph="..." />
-                <marker date="1551774675305" expanded="true" signature="160:1656" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="217:229" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="295:664" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="348:659" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="714:997" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="885:991" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="1060:1312" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="1230:1297" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="1379:1623" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="1438:1503" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="1550:1617" ph="{...}" />
-                <marker date="1551774675305" expanded="true" signature="1642:1654" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Editor/AutoSnap.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-867">
+            <state relative-caret-position="1972">
               <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
               <folding>
-                <marker date="1551776071148" expanded="true" signature="8:42" ph="..." />
+                <marker date="1551776071148" expanded="false" signature="8:42" ph="..." />
                 <marker date="1551776071148" expanded="true" signature="84:7524" ph="{...}" />
                 <marker date="1551776071148" expanded="true" signature="202:304" ph="/* These need to be static because the auto snap window is ... */" />
                 <marker date="1551776071148" expanded="true" signature="623:730" ph="/* We need to remember the window doing the snap updates ... */" />
@@ -81,14 +73,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraMover.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding>
+                <marker date="1552135813579" expanded="false" signature="6:78" ph="..." />
+                <marker date="1552135813579" expanded="true" signature="145:1065" ph="{...}" />
+                <marker date="1552135813579" expanded="true" signature="563:586" ph="{...}" />
+                <marker date="1552135813579" expanded="true" signature="681:731" ph="{...}" />
+                <marker date="1552135813579" expanded="true" signature="827:850" ph="{...}" />
+                <marker date="1552135813579" expanded="true" signature="879:1063" ph="{...}" />
+                <marker date="1552135813579" expanded="true" signature="914:1057" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/AutoSnap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/BlockWorld/BlockReplacer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -98,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="674" />
     <option name="y" value="1" />
     <option name="width" value="700" />
@@ -109,14 +119,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
       </pane>
     </panes>
   </component>
@@ -164,11 +174,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551771353215</updated>
       <workItem from="1551771362869" duration="4654000" />
+      <workItem from="1552135750371" duration="657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4654000" />
+    <option name="totallyTimeSpent" value="5311000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -180,22 +191,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="674" y="1" width="700" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.046728972" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.02265861" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -203,13 +206,22 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3289256" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,32 +242,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/BlockWorld/BlockReplacer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
+        <state relative-caret-position="340">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <marker date="1551774675305" expanded="true" signature="6:97" ph="..." />
-            <marker date="1551774675305" expanded="true" signature="160:1656" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="217:229" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="295:664" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="348:659" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="714:997" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="885:991" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="1060:1312" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="1230:1297" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="1379:1623" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="1438:1503" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="1550:1617" ph="{...}" />
-            <marker date="1551774675305" expanded="true" signature="1642:1654" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Editor/AutoSnap.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867">
+        <state relative-caret-position="1972">
           <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
           <folding>
-            <marker date="1551776071148" expanded="true" signature="8:42" ph="..." />
+            <marker date="1551776071148" expanded="false" signature="8:42" ph="..." />
             <marker date="1551776071148" expanded="true" signature="84:7524" ph="{...}" />
             <marker date="1551776071148" expanded="true" signature="202:304" ph="/* These need to be static because the auto snap window is ... */" />
             <marker date="1551776071148" expanded="true" signature="623:730" ph="/* We need to remember the window doing the snap updates ... */" />
@@ -291,6 +288,22 @@
             <marker date="1551776071148" expanded="true" signature="6538:6622" ph="{...}" />
             <marker date="1551776071148" expanded="true" signature="6761:7521" ph="{...}" />
             <marker date="1551776071148" expanded="true" signature="7339:7514" ph="/* Normally you'd remove the window, however we don't ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraMover.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <marker date="1552135813579" expanded="false" signature="6:78" ph="..." />
+            <marker date="1552135813579" expanded="true" signature="145:1065" ph="{...}" />
+            <marker date="1552135813579" expanded="true" signature="563:586" ph="{...}" />
+            <marker date="1552135813579" expanded="true" signature="681:731" ph="{...}" />
+            <marker date="1552135813579" expanded="true" signature="827:850" ph="{...}" />
+            <marker date="1552135813579" expanded="true" signature="879:1063" ph="{...}" />
+            <marker date="1552135813579" expanded="true" signature="914:1057" ph="{...}" />
           </folding>
         </state>
       </provider>
